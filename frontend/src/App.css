@@ -1,0 +1,87 @@
+.App {
+  text-align: center;
+}
+
+.buttonArea {
+  height: 300px;
+  width: 500px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 1px solid black;
+  background-color: pink;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.buttonArea button {
+  height: 80px;
+  width: 200px;
+
+  background-color: lightgreen;
+  font-size: 1.5em;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+}
+
+.boardRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.boardCell {
+  height: 32px;
+  width: 32px;
+  background-color: aqua;
+}
+
+.preparingPage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.battleshipView {
+  background-color: lightgray;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.battleship {
+  margin: 10px 10px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.battleship button {
+  height: 32px;
+  width: 32px;
+  background-color: red;
+}
+
+.readyButton {
+  height: 100px;
+  width: 250px;
+  background-color: blueviolet;
+  color: white;
+  font-size: 1.7em;
+}

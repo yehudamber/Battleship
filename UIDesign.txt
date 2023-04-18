@@ -1,0 +1,4 @@
+Screens:
+- New Game / Join Game
+- Board preparing
+- Game

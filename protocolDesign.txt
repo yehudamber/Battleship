@@ -1,0 +1,42 @@
+User ---> Server
+
+User1 --[create game { board size }]-> Server
+User1 <-[game created { game id }]-- Server
+User2 --[join game { game id }]-> Server
+User2 <-[joined { board size }]-- Server
+User1 <-[joined]-- Server
+
+User1 --[ready { board }]-> Server
+User2 <-[ready]-- Server
+User2 --[ready { board }]-> Server
+UserX <-[start { you }]-- Server
+UserY <-[start { other }]-- Server
+
+User1 --[shoot { position }]-> Server
+User1 <-[shoot { hit }]-- Server
+User2 <-[shooted { position }]-- Server
+
+---------------------------------------------------------
+
+User <-[error { message }]-- Server
+
+User1 --X-> Server
+User2 <-[disconnected]-- Server
+
+================================================================================
+
+User to Server:
+"create" - { boardSize: { height: <int>, width: <int> } }
+"join"   - { gameId: <guid> }
+"ready"  - { board: <???> } // TODO
+"shoot"  - { position: { y: <int>, x: <int> } }
+
+Server to User:
+"created"      - { gameId: <guid> }
+"joined"       - { boardSize?: { height: <int>, width: <int> } }
+"ready"        - {}
+"start"        - { yourTurn: <bool> }
+"shoot"        - { hit: <bool> }
+"shooted"      - { position: { y: <int>, x: <int> } }
+"error"        - { message: <string> }
+"disconnected" - {}
