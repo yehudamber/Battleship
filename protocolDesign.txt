@@ -14,7 +14,7 @@ UserY <-[start { other }]-- Server
 
 User1 --[shoot { position }]-> Server
 User1 <-[shoot { hit }]-- Server
-User2 <-[shooted { position }]-- Server
+User2 <-[shot { position }]-- Server
 
 ---------------------------------------------------------
 
@@ -37,6 +37,6 @@ Server to User:
 "ready"        - {}
 "start"        - { yourTurn: <bool> }
 "shoot"        - { hit: <bool> }
-"shooted"      - { position: { y: <int>, x: <int> } }
+"shot"         - { position: { y: <int>, x: <int> } }
 "error"        - { message: <string> }
 "disconnected" - {}

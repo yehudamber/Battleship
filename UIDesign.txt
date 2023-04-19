@@ -1,4 +1,22 @@
 Screens:
-- New Game / Join Game
-- Board preparing
-- Game
+1. Welcome
+2. Board preparation
+3. Game
+
+1: Welcome
+- "New Game" button
+- "Join Game" button
+  - disabled when "Game ID" is empty
+- "Game ID" text input
+
+2: Board preparation
+- Board with placed battleships
+- Battleships:
+  - placed battleships in lesser opacity
+  - selected battleship is marked
+- "Ready To Play" button
+  - disabled when there are unplaced battleships
+
+3: Game
+- Board with battleships and opponent's shoots
+- Opponent's board with player's shoots

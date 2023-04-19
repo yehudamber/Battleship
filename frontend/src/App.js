@@ -1,12 +1,16 @@
 import React from 'react';
 
 import './App.css';
-import PreparingPage from './components/PreparingPage';
+// import WelcomePage from './components/WelcomePage';
+import PreparationPage from './components/PreparationPage';
+// import GamePage from './components/GamePage';
 
 function App() {
   return (
     <div className="App">
-      <PreparingPage />
+      {/* <WelcomePage /> */}
+      <PreparationPage />
+      {/* <GamePage /> */}
     </div>
   );
 }
